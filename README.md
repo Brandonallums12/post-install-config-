@@ -26,7 +26,8 @@ Go to **Admin Panel → Settings → System** and work through the page from top
 
 ---
 <img src="https://i.imgur.com/qOlfX1V.png">
-3) Set up sending email (outbound / SMTP)
+
+**Set up sending email (outbound / SMTP)**
 1. Go to **Admin Panel → Emails → Emails**.
 2. Add your support address if it isn’t listed yet.
 3. Open that email entry and go to the **Outgoing** or **SMTP** section.
