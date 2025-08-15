@@ -1,50 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>osTicket Post‑Install Step‑by‑Step Guide</title>
-  <style>
-    :root{
-      --bg:#0f172a; /* slate-900 */
-      --panel:#111827; /* gray-900 */
-      --muted:#94a3b8; /* slate-400 */
-      --text:#e5e7eb; /* gray-200 */
-      --accent:#22d3ee; /* cyan-400 */
-      --green:#34d399; /* emerald-400 */
-      --red:#f87171; /* red-400 */
-      --border:#1f2937; /* gray-800 */
-      --code:#0b1220; /* deep */
-    }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Inter,"Helvetica Neue",Arial,sans-serif}
-    .wrap{max-width:1000px;margin:40px auto;padding:0 20px 80px}
-    h1,h2,h3{line-height:1.25}
-    h1{font-size:2.2rem;margin:0 0 12px}
-    h2{font-size:1.6rem;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--border)}
-    h3{font-size:1.2rem;margin:22px 0 8px}
-    p,li{color:#d1d5db}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .lead{color:#cbd5e1}
-    .toc{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px;margin:22px 0}
-    .toc ol{margin:0 0 0 22px}
-    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px;margin:16px 0}
-    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-    pre{background:var(--code);border:1px solid var(--border);border-radius:14px;padding:14px;overflow:auto}
-    kbd{background:#0b1325;border:1px solid var(--border);border-radius:6px;padding:2px 6px}
-    .tag{display:inline-block;border:1px solid var(--border);background:#0b1325;padding:2px 8px;border-radius:999px;color:#93c5fd;margin-right:6px}
-    .ok{color:var(--green)}
-    .warn{color:#f59e0b}
-    .danger{color:var(--red)}
-    .small{font-size:.92rem;color:var(--muted)}
-    .grid{display:grid;gap:16px}
-    @media (min-width:800px){.grid-2{grid-template-columns:1fr 1fr}}
-    hr{border:0;border-top:1px solid var(--border);margin:28px 0}
-    .checklist li{margin:6px 0}
-  </style>
-</head>
-<body>
-  <div class="wrap">
+
     <h1>osTicket Post‑Install Step‑by‑Step Guide</h1>
     <p class="lead">Use this opinionated checklist to finish setting up a fresh osTicket instance after you’ve completed the web installer and can log in as <em>Admin</em>. The steps are safe defaults and work for most small/medium helpdesks.</p>
 
