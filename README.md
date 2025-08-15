@@ -67,5 +67,4 @@ Go to **Admin Panel → Agents** and set up how work should be routed.
 ---
 
 You’re done!
-At this point, osTicket should be ready for daily use. Keep your templates and knowledge base fresh, review reports regularly, and adjust SLAs and alerts as you learn how your team works best.
-
+OsTicket should be ready for daily use.
