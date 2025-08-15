@@ -37,18 +37,17 @@ Go to **Admin Panel → Settings → System** and work through the page from top
 **Tip:** If your provider offers an “app password” or “SMTP password,” use that instead of your normal mailbox password for better security.
 
 ---
-<img src="https://i.imgur.com/qOlfX1V.png">
 
 **Set up receiving email**
 
 1. In **Admin Panel → Emails → Emails**, open your support email.
 2. Go to the **Incoming** section and turn on **IMAP**.
-3. Enter the mail server name, port, security type (SSL/TLS), and the mailbox username and password.
+3. Enter mailbox username and password.
 4. Save.
-5. Later, in the **Scheduler** step, enable the background task so osTicket checks for new mail automatically.
+5. In the **Scheduler** step, enable the background task so osTicket checks for new mail automatically.
 
 ---
-<img src="https://i.imgur.com/qOlfX1V.png">
+<img src="https://i.imgur.com/BgOt4ss.png">
 
 **Build your team structure**
 Go to **Admin Panel → Agents** and set up how work should be routed.
@@ -57,23 +56,9 @@ Go to **Admin Panel → Agents** and set up how work should be routed.
 - **Roles:** Define what agents are allowed to do (for example, standard Agent, Supervisor, Admin). Roles control permissions.
 - **Agents (staff):** Invite teammates, assign them to the correct department, role, and any teams they should belong to.
 
+  
 ---
-<img src="https://i.imgur.com/qOlfX1V.png">
 
-**Define Help Topics and SLAs**
-- **Help Topics:** Go to **Admin Panel → Manage → Help Topics** and create clear categories customers can choose from (for example, Password Reset, Bug Report, Sales Question). This helps with routing and reporting.
-- **SLA Plans:** Go to **Admin Panel → Manage → SLA** and create your response/resolve targets (for example, urgent issues due in 4 business hours; standard issues due in 24 business hours). Assign SLAs to the topics or departments that need them.
-
----
-<img src="https://i.imgur.com/qOlfX1V.png">
-
-**Tidy up email templates, auto‑replies, and alerts**
-1. **Templates:** In **Admin Panel → Emails → Templates**, duplicate the default template set so you have your own copy. Edit the wording to match your tone and include your branding.
-2. **Auto‑Responses:** In **Admin Panel → Settings → Tickets → Auto‑response**, choose whether customers should get an automatic reply when they open a ticket or send a new message.
-3. **Alerts & Notices:** In **Admin Panel → Settings → Alerts & Notices**, decide which staff receive notifications for new tickets, overdue tickets, reopened tickets, and so on. Make sure the right people get alerted without flooding inboxes.
-
----
-<img src="https://i.imgur.com/qOlfX1V.png">
 
 **Turn on the background scheduler**
 - osTicket needs a background task to fetch email and handle things like overdue checks. If your host provides a “Scheduled Tasks” or “Cron Jobs” screen, create a task that runs the osTicket scheduler frequently (every few minutes is common). If you don’t see this option, ask your host to enable it for your site.
