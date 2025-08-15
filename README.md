@@ -1,5 +1,5 @@
 <img src="https://i.imgur.com/qOlfX1V.png">
-OsTicket Post‑Install Guide (Plain‑English Walkthrough)
+OsTicket Post‑Install Guide
 
 This guide explains, in regular words and simple checklists, how to finish setting up osTicket after the web installer is done and you can sign in as an **Admin**. It avoids command lines and focuses on what to click, what to fill in, and what to double‑check.
 
