@@ -4,7 +4,7 @@ OsTicket Post‑Install Guide
 This guide explains, in regular words and simple checklists, how to finish setting up osTicket after the web installer is done and you can sign in as an **Admin**. It avoids command lines and focuses on what to click, what to fill in, and what to double‑check.
 
 ---
-
+<img src="https://i.imgur.com/GHWi9au.png">
 **Installation**
 
 1. **Remove the installer folder:** In your hosting file manager (or ask your host), delete the folder named **setup** inside your osTicket directory. This prevents anyone from rerunning the installer.
@@ -12,7 +12,7 @@ This guide explains, in regular words and simple checklists, how to finish setti
 3. **Use HTTPS:** Make sure your site address starts with **https://** so staff and customers connect securely. If you have a control panel (like cPanel, Plesk, or a managed cloud), turn on the SSL certificate there.
 
 ---
-<img src="https://i.imgur.com/qOlfX1V.png">
+<img src="https://i.imgur.com/1PoeSXm.png">
 
 **Set your basic system details**
    
@@ -25,7 +25,7 @@ Go to **Admin Panel → Settings → System** and work through the page from top
 - Review the visibility options to control what customers and staff can see.
 
 ---
-<img src="https://i.imgur.com/qOlfX1V.png">
+<img src="https://i.imgur.com/Ibykmmf.png">
 
 **Set up sending email (outbound / SMTP)**
 1. Go to **Admin Panel → Emails → Emails**.
@@ -40,17 +40,12 @@ Go to **Admin Panel → Settings → System** and work through the page from top
 <img src="https://i.imgur.com/qOlfX1V.png">
 
 **Set up receiving email**
-Choose one of these methods. Most teams start with IMAP.
 
-Option A: IMAP/POP3 (recommended for most)
 1. In **Admin Panel → Emails → Emails**, open your support email.
-2. Go to the **Incoming** section and turn on **IMAP** (or POP3 if IMAP isn’t available).
+2. Go to the **Incoming** section and turn on **IMAP**.
 3. Enter the mail server name, port, security type (SSL/TLS), and the mailbox username and password.
-4. Save. If there’s a **Fetch Test**, run it to confirm.
-5. Later, in the **Scheduler/Cron** step, enable the background task so osTicket checks for new mail automatically.
-
-Option B: Email piping (advanced/host‑managed)
-- If your mail server can forward messages directly into osTicket, set up a forwarder (often called a *pipe*) to the osTicket **pipe.php** script. This is typically done in your hosting control panel. If you’re unsure, stick with IMAP.
+4. Save.
+5. Later, in the **Scheduler** step, enable the background task so osTicket checks for new mail automatically.
 
 ---
 <img src="https://i.imgur.com/qOlfX1V.png">
@@ -80,64 +75,10 @@ Go to **Admin Panel → Agents** and set up how work should be routed.
 ---
 <img src="https://i.imgur.com/qOlfX1V.png">
 
-**Configure ticket behavior**
-Go to **Admin Panel → Manage** and **Settings → Tickets** as needed.
-- **Fields & Forms:** Add or remove fields on the ticket form to capture the right information (for example, site location, device type, order number).
-- **Priorities:** Define the priority levels your team understands (for example, P1, P2, P3) so reports are consistent.
-- **Auto‑close and Overdue Rules:** Decide when inactive tickets should close and when tickets should be marked overdue.
-- **Attachments:** Choose the maximum file size and file types customers can upload.
-
----
-<img src="https://i.imgur.com/qOlfX1V.png">
-
-**Create Knowledge Base articles and canned responses**
-- **Knowledge Base:** In the **Knowledgebase** section, create helpful articles. Organize them by category and choose whether each one is public (visible on the customer portal) or internal (for agents only).
-- **Canned Responses:** Still in **Knowledgebase**, create short, reusable replies for frequently asked questions. Agents can insert these to answer faster and more consistently.
-
----
-<img src="https://i.imgur.com/qOlfX1V.png">
-
-**Add branding and your company profile**
-- Go to **Admin Panel → Settings → Company** to set your company name, address, and upload a logo.
-- In **Admin Panel → Pages**, update the welcome text on the customer portal so it uses your voice and links to important resources (for example, status page, policy page).
-
----
-<img src="https://i.imgur.com/qOlfX1V.png">
-
-**Enable plugins and sign‑in options (optional)**
-- Put any plugins your host supports into the osTicket plugins area (your host can help with this if you don’t have direct file access).
-- In **Admin Panel → Manage → Plugins**, turn on what you need, such as:
-  - **LDAP/Active Directory** for staff to sign in with their work accounts.
-  - **reCAPTCHA** to reduce spam on public forms.
-  - Diagnostics or logging plugins if recommended by your host.
-
----
-<img src="https://i.imgur.com/qOlfX1V.png">
-
-**Turn on the background scheduler (Cron)**
+**Turn on the background scheduler**
 - osTicket needs a background task to fetch email and handle things like overdue checks. If your host provides a “Scheduled Tasks” or “Cron Jobs” screen, create a task that runs the osTicket scheduler frequently (every few minutes is common). If you don’t see this option, ask your host to enable it for your site.
 - As a fallback, you can enable **Auto‑Cron** in **Admin Panel → Settings → System**. This runs tasks when staff use the site, but it’s less reliable for regular email fetching.
 
----
-<img src="https://i.imgur.com/qOlfX1V.png">
-
-**Plan for backups and routine maintenance**
-- **Database:** Ask your host to include your osTicket database in nightly backups, and confirm how to restore it if needed.
-- **Attachments/Uploads:** Ensure the folder that stores file uploads is also backed up on a schedule.
-- **Test a restore:** Periodically perform a small test restore so you know your backups actually work.
-- **Health checks:** In **Admin Panel → Dashboard → System Logs**, review warnings or errors and address them promptly.
-
----
-<img src="https://i.imgur.com/qOlfX1V.png">
-
-**Test everything before you go live**
-Use this quick checklist to make sure the basics work end‑to‑end:
-- Open a ticket from the customer portal and confirm the correct department is notified.
-- Send an email to your support address and confirm a ticket is created and the customer receives an acknowledgment.
-- Reply from the agent side and confirm the customer receives the reply by email.
-- Transfer a ticket between departments or teams and make sure the right people are notified and the SLA still makes sense.
-- Close a ticket and, if you use them, confirm any satisfaction survey or closure message is sent.
-- Look at the **System Logs** to ensure there are no errors related to email sending, email fetching, or permissions.
 ---
 
 You’re done!
