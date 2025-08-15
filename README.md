@@ -1,3 +1,4 @@
+<img src="[https://example.com/logo.png">
 # osTicket Post‑Install Step‑by‑Step Guide
 
 Use this opinionated checklist to finish setting up a fresh osTicket instance after you’ve completed the web installer and can log in as **Admin**. The steps are safe defaults and work for most small/medium helpdesks.
